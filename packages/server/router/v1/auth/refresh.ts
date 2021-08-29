@@ -1,9 +1,9 @@
 import { FastifyRequest, FastifyReply, FastifySchema } from 'fastify';
 import httpStatusCodes from 'http-status-codes';
 
+import type { paths, JSONResponseOf } from 'shared/types';
 import { TOKEN_EXPIRE_IN } from '@/config/constants';
 import { refreshAccessToken, upsertToken } from '@/helper';
-import type { paths, JSONResponseOf } from 'shared/types';
 
 type Path = paths['/auth/refresh']['put'];
 type Request = FastifyRequest<{ Body: Path['requestBody']['content']['application/json'] }>;

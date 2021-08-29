@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-import { SPOTIFY_AUTHORIZE_BASE_URL, SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } from '@/config/constants';
 import { logger } from 'shared/logger';
 import type { SpotifyAPI } from 'shared/types';
+import { SPOTIFY_AUTHORIZE_BASE_URL, SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } from '@/config/constants';
 
 export const refreshAccessToken = (refresh_token: string | undefined): Promise<SpotifyAPI.Auth.Token | undefined> => {
   if (refresh_token == null) {

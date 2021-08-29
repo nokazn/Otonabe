@@ -1,9 +1,9 @@
 import httpStatusCodes from 'http-status-codes';
 import type { FastifyRequest, FastifyReply, FastifySchema } from 'fastify';
 
+import type { paths, JSONResponseOf } from 'shared/types';
 import { upsertToken, exchangeAccessToken } from '@/helper';
 import { TOKEN_EXPIRE_IN } from '@/config/constants';
-import type { paths, JSONResponseOf } from 'shared/types';
 
 type Path = paths['/auth/login/callback']['get'];
 type Request = FastifyRequest<{ Querystring: Path['parameters']['query'] }>;

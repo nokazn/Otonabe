@@ -76,6 +76,7 @@ module.exports = {
         vue: 'always',
         json: 'always',
         worker: 'always',
+        config: 'always',
       },
     ],
     // ts でチェック
